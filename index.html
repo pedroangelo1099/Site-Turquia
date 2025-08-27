@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encomendas de Itens do Jogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Encomendas de Itens do Jogo</h1>
+            <form id="formUsuario">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+                <label for="idJogo">ID do Jogo:</label>
+                <input type="text" id="idJogo" placeholder="Digite seu ID do jogo" required>
+
+                <label for="discord">Seu Discord:</label>
+                <input type="text" id="discord" placeholder="Digite seu Discord" required>
+            </form>
+        </header>
+
+        <section class="produtos">
+            <h2>Escolha seus Itens</h2>
+            <div class="produto" data-id="1">
+                <img src="item1.jpg" alt="Item 1">
+                <p>Item 1</p>
+                <button class="menos">-</button>
+                <input type="number" value="0" class="quantidade" readonly>
+                <button class="mais">+</button>
+                <span class="preco">R$ 10,00</span>
+            </div>
+
+            <div class="produto" data-id="2">
+                <img src="item2.jpg" alt="Item 2">
+                <p>Item 2</p>
+                <button class="menos">-</button>
+                <input type="number" value="0" class="quantidade" readonly>
+                <button class="mais">+</button>
+                <span class="preco">R$ 20,00</span>
+            </div>
+        </section>
+
+        <section class="carrinho">
+            <h2>Carrinho</h2>
+            <div id="itensCarrinho"></div>
+            <p>Total: R$ <span id="total">0,00</span></p>
+            <button id="encomendar">Encomendar</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
